@@ -39,8 +39,20 @@ If you're a startup, agency, or SaaS founder looking for a dashboard that's **fa
 | Sign In | Analytics |
 |---|---|
 | ![Sign In](sign_in_ScreenShot.png) | ![Analytics](analytics_ScreenShot.png) |
+
+| Billing | Index |
+|---|---|
+| ![Billing](billing_ScreenShot.png) | ![Index](index_ScreenShot.png) |
+
+| Order | Message |
+|---|---|
+| ![Order](order_ScreenShot.png) | ![Message](message_ScreenShot.png) |
+
+| Profile | settings |
+|---|---|
+| ![Profile](profile_ScreenShot.png) | ![Settings](settings
+_ScreenShot.png) |
  
-More screenshots available in the [`Screenshots/`](Screenshots) folder — Billing, Orders, Messages, Settings, and Profile pages included.
 
 ---
 
@@ -124,8 +136,8 @@ Change the palette once — it propagates across every page and every component 
 
 This dashboard is available for **customization, white-labeling, and integration** into your product. If you're looking for a developer to adapt Pulse to your brand or connect it to your backend, feel free to reach out.
 
-**Contact:** your-email@example.com
-**Portfolio:** your-portfolio-link.com
+**Contact:** sirajudinrajper43@gmail.com.com
+**LinkedIn:** (https://www.linkedin.com/in/siraj-u-din-40431a324/)
 
 ---
 
