@@ -31,15 +31,15 @@ If you're a startup, agency, or SaaS founder looking for a dashboard that's **fa
 ---
 
 ## 🖥️ Preview
-
+ 
 | Dashboard Overview | Customers |
 |---|---|
-| ![Dashboard](dashboard.png) | ![Customers](customers.png) |
-
+| ![Dashboard](dashboard_ScreenShot.png) | ![Customers](customers_ScreenShot.png) |
+ 
 | Sign In | Analytics |
 |---|---|
-| ![Sign In](sign_in.png) | ![Analytics](analytics.png) |
-
+| ![Sign In](sign_in_ScreenShot.png) | ![Analytics](analytics_ScreenShot.png) |
+ 
 More screenshots available in the [`Screenshots/`](Screenshots) folder — Billing, Orders, Messages, Settings, and Profile pages included.
 
 ---
