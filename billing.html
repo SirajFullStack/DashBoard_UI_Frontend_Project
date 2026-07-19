@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — Billing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="shell">
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M2 12h4l2-7 4 14 3-10 2 3h5" stroke="#0B0F19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Pulse</div>
+        <div class="brand-sub">Growth admin</div>
+      </div>
+    </div>
+
+    <div class="nav-label">Overview</div>
+    <a class="nav-item" data-page="dashboard" href="dashboard.html" data-title="Overview" data-sub="Wed, Jul 15 · Last synced 2 min ago">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+      Dashboard
+    </a>
+    <a class="nav-item" data-page="analytics" href="analytics.html" data-title="Analytics" data-sub="Deep dive into traffic &amp; engagement">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9M13 17V5M8 17v-4"/></svg>
+      Analytics
+    </a>
+    <a class="nav-item" data-page="customers" href="customers.html" data-title="Customers" data-sub="248 total customers">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Customers
+      <span class="badge">+12</span>
+    </a>
+    <a class="nav-item" data-page="orders" href="orders.html" data-title="Orders" data-sub="1,926 orders this month">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h9"/><path d="M14 2v6h6"/><path d="M16 17.5l2 2 4-4"/></svg>
+      Orders
+    </a>
+
+    <div class="nav-label">Manage</div>
+    <a class="nav-item active" data-page="billing" href="billing.html" data-title="Billing" data-sub="Plan, invoices &amp; payment methods">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+      Billing
+    </a>
+    <a class="nav-item" data-page="messages" href="messages.html" data-title="Messages" data-sub="4 unread conversations">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Messages
+    </a>
+    <a class="nav-item" data-page="settings" href="settings.html" data-title="Settings" data-sub="Workspace &amp; account preferences">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.13.47.4.9.76 1.24.36.34.79.6 1.24.76.13 0 .25.09.36.16"/></svg>
+      Settings
+    </a>
+      </a>
+      <a class="nav-item" data-page="settings" href="sign_in.html" data-title="logout" data-sub="Workspace &amp; account preferences">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.13.47.4.9.76 1.24.36.34.79.6 1.24.76.13 0 .25.09.36.16"/></svg>
+      logout
+    </a>
+
+    <div class="sidebar-footer">
+      <div class="plan-card">
+        <strong>Growth plan</strong>
+        API usage · 68% of 100k calls
+        <div class="plan-bar"><div></div></div>
+        Resets in 9 days
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="main">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <div>
+        <div class="page-title" id="pageTitle">Billing</div>
+        <div class="page-sub" id="pageSub">Plan, invoices & payment methods</div>
+      </div>
+
+      <div class="search" id="searchWrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="menuSearchInput" autocomplete="off" placeholder="Search menu… (Dashboard, Billing, Logout…)">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+
+      <div class="topbar-actions">
+        <!-- ===== THEME TOGGLE (instant switch) ===== -->
+        <div class="theme-wrap" id="themeWrap">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+
+        <button class="icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span class="dot"></span>
+        </button>
+
+        <!-- ===== PROFILE CHIP + DROPDOWN ===== -->
+        <div class="profile-wrap" id="profileWrap">
+          <div class="profile-chip" id="profileChip">
+            <a href="profile.html" class="profile-chip-link" aria-label="Go to my profile">
+              <div class="avatar">SD</div>
+              <div>
+                <div class="pname">Siraj U Din</div>
+                <div class="prole">BS Computer Science Student</div>
+              </div>
+            </a>
+            <button class="chip-caret-btn" id="chipCaretBtn" aria-label="Open account menu" type="button">
+              <svg class="chip-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+
+          <div class="profile-menu" id="profileMenu">
+            <div class="profile-menu-head">
+              <div class="avatar">SD</div>
+              <div>
+                <div class="profile-menu-name">Siraj U Din</div>
+                <div class="profile-menu-email">sirajudinrajper43@gmail.com</div>
+              </div>
+            </div>
+            <div class="profile-menu-list">
+              <a class="profile-menu-item" href="profile.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                My profile
+              </a>
+              <a class="profile-menu-item" href="settings.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.13.47.4.9.76 1.24.36.34.79.6 1.24.76.13 0 .25.09.36.16"/></svg>
+                Account settings
+              </a>
+              <a class="profile-menu-item" href="billing.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                Billing
+              </a>
+              <div class="profile-menu-divider"></div>
+              <button class="profile-menu-item danger" data-action="logout">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+                Sign out
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- ============ PAGE: BILLING ============ -->
+      <div class="page" data-page="billing">
+        <section class="panels-grid">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <div class="panel-title">Current Plan</div>
+                <div class="panel-sub">Growth · billed monthly</div>
+              </div>
+              <button class="btn-primary" style="background:var(--surface-2); color:var(--text); border:1px solid var(--border);">Upgrade</button>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:8px;">
+              <div class="stat-value" style="font-size:32px;">$249</div>
+              <div style="color:var(--text-muted); font-size:13px;">/ month</div>
+            </div>
+            <div>
+              <div style="font-size:12.5px; color:var(--text-muted); margin-bottom:8px;">API usage · 68,204 of 100,000 calls</div>
+              <div class="plan-bar"><div></div></div>
+            </div>
+            <div style="font-size:12.5px; color:var(--text-muted);">Next invoice on Aug 1, 2026 · Resets in 9 days</div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <div class="panel-title">Payment Method</div>
+                <div class="panel-sub">Default card on file</div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px; background:var(--surface-2); border:1px solid var(--border); border-radius:12px; padding:14px;">
+              <div class="stat-icon" style="background:var(--accent-soft); color:var(--accent);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:13.5px;">Visa •••• 4471</div>
+                <div style="font-size:11.5px; color:var(--text-muted);">Expires 03/28</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="table-panel">
+          <div class="table-toolbar"><div class="panel-title">Invoice History</div></div>
+          <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Invoice</th><th>Date</th><th>Status</th><th>Amount</th><th></th></tr></thead>
+            <tbody id="billingTableBody"></tbody>
+          </table>
+          </div>
+        </section>
+      </div>
+
+
+    </main>
+  </div>
+</div>
+
+<script src="billing.js" defer></script>
+</body>
+</html>

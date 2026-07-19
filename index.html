@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="shell">
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M2 12h4l2-7 4 14 3-10 2 3h5" stroke="#0B0F19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Pulse</div>
+        <div class="brand-sub">Growth admin</div>
+      </div>
+    </div>
+
+    <div class="nav-label">Overview</div>
+    <a class="nav-item active" data-page="dashboard" href="dashboard.html" data-title="Overview" data-sub="Wed, Jul 15 · Last synced 2 min ago">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+      Dashboard
+    </a>
+    <a class="nav-item" data-page="analytics" href="analytics.html" data-title="Analytics" data-sub="Deep dive into traffic &amp; engagement">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9M13 17V5M8 17v-4"/></svg>
+      Analytics
+    </a>
+    <a class="nav-item" data-page="customers" href="customers.html" data-title="Customers" data-sub="248 total customers">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Customers
+      <span class="badge">+12</span>
+    </a>
+    <a class="nav-item" data-page="orders" href="orders.html" data-title="Orders" data-sub="1,926 orders this month">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h9"/><path d="M14 2v6h6"/><path d="M16 17.5l2 2 4-4"/></svg>
+      Orders
+    </a>
+
+    <div class="nav-label">Manage</div>
+    <a class="nav-item" data-page="billing" href="billing.html" data-title="Billing" data-sub="Plan, invoices &amp; payment methods">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+      Billing
+    </a>
+    <a class="nav-item" data-page="messages" href="messages.html" data-title="Messages" data-sub="4 unread conversations">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Messages
+    </a>
+    <a class="nav-item" data-page="settings" href="settings.html" data-title="Settings" data-sub="Workspace &amp; account preferences">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.13.47.4.9.76 1.24.36.34.79.6 1.24.76.13 0 .25.09.36.16"/></svg>
+      Settings
+    </a>
+      <a class="nav-item" data-page="settings" href="sign_in.html" data-title="logout" data-sub="Workspace &amp; account preferences">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.13.47.4.9.76 1.24.36.34.79.6 1.24.76.13 0 .25.09.36.16"/></svg>
+      logout
+    </a>
+
+    <div class="sidebar-footer">
+      <div class="plan-card">
+        <strong>Growth plan</strong>
+        API usage · 68% of 100k calls
+        <div class="plan-bar"><div></div></div>
+        Resets in 9 days
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="main">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <div>
+        <div class="page-title" id="pageTitle">Overview</div>
+        <div class="page-sub" id="pageSub">Wed, Jul 15 · Last synced 2 min ago</div>
+      </div>
+
+      <div class="search" id="searchWrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="menuSearchInput" autocomplete="off" placeholder="Search menu… (Dashboard, Billing, Logout…)">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+
+      <div class="topbar-actions">
+        <!-- ===== THEME TOGGLE (instant switch) ===== -->
+        <div class="theme-wrap" id="themeWrap">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+
+        <button class="icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span class="dot"></span>
+        </button>
+
+        <!-- ===== PROFILE CHIP + DROPDOWN ===== -->
+        <div class="profile-wrap" id="profileWrap">
+          <div class="profile-chip" id="profileChip">
+            <a href="profile.html" class="profile-chip-link" aria-label="Go to my profile">
+              <div class="avatar">SD</div>
+              <div>
+                <div class="pname">Siraj U Din</div>
+                <div class="prole">BS Computer Science Student</div>
+              </div>
+            </a>
+            <button class="chip-caret-btn" id="chipCaretBtn" aria-label="Open account menu" type="button">
+              <svg class="chip-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+
+          <div class="profile-menu" id="profileMenu">
+            <div class="profile-menu-head">
+              <div class="avatar">SD</div>
+              <div>
+                <div class="profile-menu-name">Siraj U Din</div>
+                <div class="profile-menu-email">sirajudinrajper43@gmail.com</div>
+              </div>
+            </div>
+            <div class="profile-menu-list">
+              <a class="profile-menu-item" href="profile.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                My profile
+              </a>
+              <a class="profile-menu-item" href="settings.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.13.47.4.9.76 1.24.36.34.79.6 1.24.76.13 0 .25.09.36.16"/></svg>
+                Account settings
+              </a>
+              <a class="profile-menu-item" href="billing.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                Billing
+              </a>
+              <div class="profile-menu-divider"></div>
+              <button class="profile-menu-item danger" data-action="logout">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+                Sign out
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- ============ PAGE: DASHBOARD ============ -->
+      <div class="page" data-page="dashboard">
+
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-top">
+              <div>
+                <div class="stat-label">Total Revenue</div>
+                <div class="stat-value">$84,290</div>
+              </div>
+              <div class="stat-icon" style="background:var(--accent-soft); color:var(--accent);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+            </div>
+            <canvas class="spark" id="spark1"></canvas>
+            <div class="stat-delta up">▲ 12.4% <span style="color:var(--text-muted); font-weight:400;">vs last month</span></div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <div>
+                <div class="stat-label">Active Users</div>
+                <div class="stat-value">12,847</div>
+              </div>
+              <div class="stat-icon" style="background:var(--good-soft); color:var(--good);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+            </div>
+            <canvas class="spark" id="spark2"></canvas>
+            <div class="stat-delta up">▲ 8.1% <span style="color:var(--text-muted); font-weight:400;">vs last month</span></div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <div>
+                <div class="stat-label">New Orders</div>
+                <div class="stat-value">1,926</div>
+              </div>
+              <div class="stat-icon" style="background:var(--warn-soft); color:var(--warn);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+            </div>
+            <canvas class="spark" id="spark3"></canvas>
+            <div class="stat-delta down">▼ 2.3% <span style="color:var(--text-muted); font-weight:400;">vs last month</span></div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <div>
+                <div class="stat-label">Churn Rate</div>
+                <div class="stat-value">2.4%</div>
+              </div>
+              <div class="stat-icon" style="background:var(--bad-soft); color:var(--bad);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+            </div>
+            <canvas class="spark" id="spark4"></canvas>
+            <div class="stat-delta up" style="color:var(--good)">▼ 0.6% <span style="color:var(--text-muted); font-weight:400;">vs last month</span></div>
+          </div>
+        </section>
+
+        <section class="panels-grid">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <div class="panel-title">Revenue &amp; Orders</div>
+                <div class="panel-sub">Performance over the last 7 months</div>
+              </div>
+              <div class="seg">
+                <button class="active" data-range="m">Monthly</button>
+                <button data-range="w">Weekly</button>
+              </div>
+            </div>
+            <div class="chart-wrap"><canvas id="mainChart"></canvas></div>
+            <div class="legend-row">
+              <div class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span>Revenue</div>
+              <div class="legend-item"><span class="legend-dot" style="background:var(--good)"></span>Orders</div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <div class="panel-title">Traffic Sources</div>
+                <div class="panel-sub">Where visits come from</div>
+              </div>
+            </div>
+            <div class="chart-wrap small"><canvas id="donutChart"></canvas></div>
+            <div class="donut-stats">
+              <div class="donut-stat-row"><span class="lbl"><span class="legend-dot" style="background:#5B8CFF"></span>Organic Search</span><span class="val">42%</span></div>
+              <div class="donut-stat-row"><span class="lbl"><span class="legend-dot" style="background:#22D3A5"></span>Direct</span><span class="val">27%</span></div>
+              <div class="donut-stat-row"><span class="lbl"><span class="legend-dot" style="background:#F5A623"></span>Social</span><span class="val">19%</span></div>
+              <div class="donut-stat-row"><span class="lbl"><span class="legend-dot" style="background:#8B6BFF"></span>Referral</span><span class="val">12%</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="table-panel">
+          <div class="table-toolbar">
+            <div class="tabs">
+              <div class="tab active">All Customers</div>
+              <div class="tab">Active</div>
+              <div class="tab">Pending</div>
+              <div class="tab">Churned</div>
+            </div>
+            <button class="btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              Add Customer
+            </button>
+          </div>
+
+          <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer</th>
+                <th>Plan</th>
+                <th>Status</th>
+                <th>MRR</th>
+                <th>Joined</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+          </div>
+
+          <div class="table-footer">
+            <div>Showing 1–6 of 248 customers</div>
+            <div class="pager">
+              <button>‹</button>
+              <button class="active">1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>›</button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+
+    </main>
+  </div>
+</div>
+
+<script src="index.js" defer></script>
+</body>
+</html>
