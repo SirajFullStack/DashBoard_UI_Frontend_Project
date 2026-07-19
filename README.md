@@ -46,7 +46,7 @@ If you're a startup, agency, or SaaS founder looking for a dashboard that's **fa
 
 | Order | Message |
 |---|---|
-| ![Order](order_ScreenShot.png) | ![Message](message_ScreenShot.png) |
+| ![Order](orders_ScreenShot.png) | ![Message](messages_ScreenShot.png) |
 
 | Profile | settings |
 |---|---|
