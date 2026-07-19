@@ -50,8 +50,7 @@ If you're a startup, agency, or SaaS founder looking for a dashboard that's **fa
 
 | Profile | settings |
 |---|---|
-| ![Profile](profile_ScreenShot.png) | ![Settings](settings
-_ScreenShot.png) |
+| ![Profile](profile_ScreenShot.png) | ![Settings](settings_ScreenShot.png) |
  
 
 ---
