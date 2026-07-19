@@ -5,7 +5,6 @@ A sleek, modern, fully responsive admin dashboard UI built with **pure HTML, CSS
 ![Made with HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![Made with CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![Made with JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![No Framework](https://img.shields.io/badge/Dependencies-None-success?style=flat)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat)
 
 ---
@@ -35,11 +34,11 @@ If you're a startup, agency, or SaaS founder looking for a dashboard that's **fa
 
 | Dashboard Overview | Customers |
 |---|---|
-| ![Dashboard](Screenshots/dashboard.png) | ![Customers](Screenshots/customers.png) |
+| ![Dashboard](dashboard.png) | ![Customers](customers.png) |
 
 | Sign In | Analytics |
 |---|---|
-| ![Sign In](Screenshots/sign_in.png) | ![Analytics](Screenshots/analytics.png) |
+| ![Sign In](sign_in.png) | ![Analytics](analytics.png) |
 
 More screenshots available in the [`Screenshots/`](Screenshots) folder — Billing, Orders, Messages, Settings, and Profile pages included.
 
